@@ -31,7 +31,5 @@ $(document).ready(function (e) {
                 console.log(response);
             }
         })
-        //  $.post($(this).attr('action'), datas, function (response) { });
-
     }
 });
