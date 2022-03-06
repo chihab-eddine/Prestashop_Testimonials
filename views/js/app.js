@@ -9,15 +9,7 @@ $(document).ready(function (e) {
 
         var form_data = new FormData();
         form_data.append('file', file);
-        console.log(form_data);
 
-        var datas = {
-            'title': $('#title').val(),
-            'message': $('#message').val(),
-            'file': 'bleh',
-            'process': 'add',
-            'ajax': 1
-        }
 
         $.ajax({
             url: $(this).attr('action'),
@@ -28,7 +20,7 @@ $(document).ready(function (e) {
             processeData: false,
 
             success: function (response) {
-                console.log(response);
+                //   console.log(response);
             }
         })
     }
