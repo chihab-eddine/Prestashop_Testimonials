@@ -92,8 +92,9 @@ class AdminTestimonialController extends ModuleAdminController
             'error' => array(),
             'image' => '',
         );
+
         $types = array('Doc', 'jpeg', 'docx', 'png');
-        if (isset($_FILES[$file]) && isset($_FILES[$file]['tmp_name']) && !empty($_FILES[$file]['tmp_name'])) {
+        if (isset($_FILES[$file]) && isset($_FILES[$file]['tmp_name']) && !empty($_FILES[$file]['tmp_name']) && ($_FILES[$file]['size'] < 1048576)) {
             $name = str_replace(strrchr($_FILES[$file]['name'], '.'), '', $_FILES[$file]['name']);
 
             $imageSize = @getimagesize($_FILES[$file]['tmp_name']);
